@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+
+:root {
+    --clr-gold: #DCC48E;
+    --clr-beige: #EAEFD3;
+    --clr-purple: #27233A;
+}
+body{
+    background-color: var(--clr-purple);
+    color:var(--clr-beige);
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:1rem;
+    background-color: var(--clr-beige);
+    color:var(--clr-purple);
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem; /*PARA PONERLE SOLO UN REDONDEO ABAJO A LA IZQUIERDA Y A LA DERECHA*/
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+.instrucciones{
+     margin-bottom: 2rem;
+}
+.marcador{
+    background-color: var(--clr-gold);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: relative; /*Para que los hijos puedan tener position absolute, el marcador debe tener position relative*/
+   display: flex;
+   align-items: center;
+   font-weight: 600;
+   margin-bottom: 2rem;
+  
+   }
+.marcador .nombre{ /*Estoy llamando a ambos, por eso le pusimos dos clases*/
+    position: absolute;
+    color: var(--clr-beige);
+    background-color: var(--clr-purple);
+    line-height: 1;
+    padding:0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--clr-gold);
+
+
+}
+.marcador .nombre-jugador{ /*Ahora los podemos modificar segun el padre, por eso el position relative al padre y el position absolute a los hijos*/
+    right: 85%; /*Se movera un 85% del contenedor hacia la derecha*/
+
+}
+.marcador .nombre-computadora{
+    left: 85%;/*Se movera un 85% del contenedor hacia la izquierda*/
+
+}
+.marcador .puntos{
+    font-size: 1.6rem;
+    color:var(--clr-purple);
+}
+.elegi-tu-arma{
+    margin-bottom: 2rem;
+}
+.elegi-tu-arma h2{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+.armas{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+}
+.arma{
+    font-size: 2rem;
+    background-color: var(--clr-beige);
+    padding: 0.5rem;
+    border:0;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+.mensaje{
+    margin-bottom: 2rem;
+    line-height: 2.5; /*Para el espaciado de arriba*/
+    
+}
+.mensaje .eleccion{ /*Estamos modificando solamente el span*/
+    color:var(--clr-purple);
+    background-color: var(--clr-gold);
+    border-radius: 0.25rem;
+    padding:0.25rem;
+
+}
+.btn{
+    border:0;
+    line-height: 1;
+    background-color: var(--clr-beige);
+    color:var(--clr-purple);
+    font-size: 1rem;
+    padding:0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+
+
+}
+.disabled{
+    display: none;
+}
